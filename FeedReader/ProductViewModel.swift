@@ -18,11 +18,11 @@ struct ProductViewModel {
     }
     
     var rating: String {
-        return "Ratings: \(product.rating) of 5"
+        return "Ratings: \(product.rating) of 5.0"
     }
     
     var pubDate: String {
-        return product.pubDate
+        return "Publication Date: \(product.pubDate)"
     }
     
     private let product: Product
