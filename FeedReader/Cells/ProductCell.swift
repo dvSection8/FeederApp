@@ -42,6 +42,10 @@ class ProductCell: UITableViewCell {
             productView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -Dimensions.spacing),
             productView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Dimensions.spacing),
             ])
+        
+        productView.titleLabel.font = UIFont(name: "Avenir-Book", size: 15)
+        productView.pubDateLabel.font = UIFont(name: "Avenir-Book", size: 13)
+        productView.ratingLabel.font = UIFont(name: "Avenir-Book", size: 13)
     }
     
     func configure() {
