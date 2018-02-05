@@ -31,6 +31,7 @@
 		EEC55DD120286BB4003E28EB /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC55DCD20286BB4003E28EB /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEC55DD320287785003E28EB /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC55DD220287785003E28EB /* SwiftSoup.framework */; };
 		EEC55DD420287785003E28EB /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC55DD220287785003E28EB /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEC55DD620289F53003E28EB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC55DD520289F53003E28EB /* ProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		EEC55DCC20286BB3003E28EB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		EEC55DCD20286BB4003E28EB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		EEC55DD220287785003E28EB /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
+		EEC55DD520289F53003E28EB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				EE7A2827202839BF00E837AC /* FeedRepository.swift */,
 				EE7A28172028314300E837AC /* FeedViewController.swift */,
 				EE7A28192028340600E837AC /* Product.swift */,
+				EEC55DD520289F53003E28EB /* ProductViewModel.swift */,
 				EEC55DC8202853F6003E28EB /* ProductXMLParser.swift */,
 				EE7A282920283A5400E837AC /* SessionManager.swift */,
 				EE7A27EC20282E5300E837AC /* Assets.xcassets */,
@@ -342,6 +345,7 @@
 			files = (
 				EE7A282C20283F4100E837AC /* ProductView.swift in Sources */,
 				EE7A2821202835C500E837AC /* ViewReusable.swift in Sources */,
+				EEC55DD620289F53003E28EB /* ProductViewModel.swift in Sources */,
 				EE7A2824202836FC00E837AC /* UIView+SafeAreaAnchors.swift in Sources */,
 				EEC55DC9202853F6003E28EB /* ProductXMLParser.swift in Sources */,
 				EE7A282A20283A5400E837AC /* SessionManager.swift in Sources */,
