@@ -10,9 +10,17 @@ import Foundation
 
 struct Product: Codable {
     var title: String = ""
-    var guid: String = ""
+    var guid: String?
     var pubDate: String = ""
     var link: String = ""
     var imageUrl: String = ""
     var rating: Double = 0
 }
+
+extension Product: Equatable {
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.guid == rhs.guid
+    }
+}
+
+
