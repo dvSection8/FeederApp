@@ -29,7 +29,7 @@ class FeedViewController: UIViewController, IFeedView {
     // MARK: - Subviews
     lazy private(set) var searchController: UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
-        sc.searchBar.placeholder = "Search Books..."
+        sc.searchBar.placeholder = "Search..."
         sc.searchBar.delegate = self
         sc.searchBar.sizeToFit()
         
