@@ -114,13 +114,8 @@ extension FeedViewController: UITableViewDataSource {
             return UITableViewCell()
         } 
         
-        // TODO: Move this view model
-        cell.productView.titleLabel.text = products[indexPath.row].title
-        cell.productView.pubDateLabel.text = products[indexPath.row].pubDate
-        cell.productView.ratingLabel.text = "\(products[indexPath.row].rating)"
-        
-        let url = URL(string: products[indexPath.row].imageUrl)
-        cell.productView.prodImage.kf.setImage(with: url)
+        cell.viewModel = ProductViewModel(product: products[indexPath.row])
+        cell.configure()
         
         return cell
     }

@@ -9,15 +9,14 @@
 import Foundation
 import UIKit
 
-class ProductCell: UITableViewCell, ViewReusable {
+class ProductCell: UITableViewCell {
     private struct Dimensions {
         static var spacing: CGFloat = 8
     }
     
-    static var reuseId: String {
-        return String(describing: self)
-    }
-    
+    var viewModel: ProductViewModel?
+
+    // MARK: - Subviews
     lazy private(set) var productView: ProductView = {
         let pv = ProductView()
         pv.translatesAutoresizingMaskIntoConstraints = false
@@ -43,5 +42,23 @@ class ProductCell: UITableViewCell, ViewReusable {
             productView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -Dimensions.spacing),
             productView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Dimensions.spacing),
             ])
+    }
+    
+    func configure() {
+        // TODO: Move this view model
+        productView.titleLabel.text = viewModel?.title
+        productView.pubDateLabel.text = viewModel?.pubDate
+        productView.ratingLabel.text = viewModel?.rating
+        
+        if let url = viewModel?.imageUrl {
+            productView.prodImage.kf.setImage(with: url)
+        }
+    }
+}
+
+// MARK: - ViewReusable
+extension ProductCell: ViewReusable {
+    static var reuseId: String {
+        return String(describing: self)
     }
 }
