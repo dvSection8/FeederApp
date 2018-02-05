@@ -32,6 +32,15 @@
 		EEC55DD320287785003E28EB /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC55DD220287785003E28EB /* SwiftSoup.framework */; };
 		EEC55DD420287785003E28EB /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC55DD220287785003E28EB /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEC55DD620289F53003E28EB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC55DD520289F53003E28EB /* ProductViewModel.swift */; };
+		EEC80F752028D67D00300A53 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F6D2028D67C00300A53 /* Release.xcconfig */; };
+		EEC80F762028D67D00300A53 /* QA.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F6E2028D67D00300A53 /* QA.xcconfig */; };
+		EEC80F772028D67D00300A53 /* Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F6F2028D67D00300A53 /* Development.plist */; };
+		EEC80F782028D67D00300A53 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F702028D67D00300A53 /* Staging.xcconfig */; };
+		EEC80F792028D67D00300A53 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F712028D67D00300A53 /* Release.plist */; };
+		EEC80F7A2028D67D00300A53 /* QA.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F722028D67D00300A53 /* QA.plist */; };
+		EEC80F7B2028D67D00300A53 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F732028D67D00300A53 /* Development.xcconfig */; };
+		EEC80F7C2028D67D00300A53 /* Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEC80F742028D67D00300A53 /* Staging.plist */; };
+		EEC80F7F2028D76600300A53 /* PlistHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC80F7E2028D76600300A53 /* PlistHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +83,6 @@
 		EE7A27E720282E5300E837AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE7A27EC20282E5300E837AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE7A27EF20282E5300E837AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EE7A27F120282E5300E837AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE7A27F620282E5300E837AC /* FeedReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7A27FA20282E5300E837AC /* FeedReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReaderTests.swift; sourceTree = "<group>"; };
 		EE7A27FC20282E5300E837AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +104,15 @@
 		EEC55DCD20286BB4003E28EB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		EEC55DD220287785003E28EB /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		EEC55DD520289F53003E28EB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		EEC80F6D2028D67C00300A53 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = FeedReader/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		EEC80F6E2028D67D00300A53 /* QA.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QA.xcconfig; path = FeedReader/QA.xcconfig; sourceTree = SOURCE_ROOT; };
+		EEC80F6F2028D67D00300A53 /* Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Development.plist; path = FeedReader/Development.plist; sourceTree = SOURCE_ROOT; };
+		EEC80F702028D67D00300A53 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Staging.xcconfig; path = FeedReader/Staging.xcconfig; sourceTree = SOURCE_ROOT; };
+		EEC80F712028D67D00300A53 /* Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Release.plist; path = FeedReader/Release.plist; sourceTree = SOURCE_ROOT; };
+		EEC80F722028D67D00300A53 /* QA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QA.plist; path = FeedReader/QA.plist; sourceTree = SOURCE_ROOT; };
+		EEC80F732028D67D00300A53 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = FeedReader/Development.xcconfig; sourceTree = SOURCE_ROOT; };
+		EEC80F742028D67D00300A53 /* Staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Staging.plist; path = FeedReader/Staging.plist; sourceTree = SOURCE_ROOT; };
+		EEC80F7E2028D76600300A53 /* PlistHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,17 +171,18 @@
 		EE7A27E120282E5200E837AC /* FeedReader */ = {
 			isa = PBXGroup;
 			children = (
-				EE7A27F120282E5300E837AC /* Info.plist */,
 				EE7A27E220282E5200E837AC /* AppDelegate.swift */,
 				EE7A28252028379A00E837AC /* FeedPresenter.swift */,
 				EE7A2827202839BF00E837AC /* FeedRepository.swift */,
 				EE7A28172028314300E837AC /* FeedViewController.swift */,
+				EEC80F7E2028D76600300A53 /* PlistHelper.swift */,
 				EE7A28192028340600E837AC /* Product.swift */,
 				EEC55DD520289F53003E28EB /* ProductViewModel.swift */,
 				EEC55DC8202853F6003E28EB /* ProductXMLParser.swift */,
 				EE7A282920283A5400E837AC /* SessionManager.swift */,
 				EE7A27EC20282E5300E837AC /* Assets.xcassets */,
 				EE7A281B2028357700E837AC /* Cells */,
+				EEC80F7D2028D69200300A53 /* Config */,
 				EE7A2822202836F000E837AC /* Extensions */,
 				EE7A27EE20282E5300E837AC /* LaunchScreen.storyboard */,
 				EE7A27E620282E5300E837AC /* Main.storyboard */,
@@ -206,6 +224,21 @@
 				EE7A2823202836FC00E837AC /* UIView+SafeAreaAnchors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEC80F7D2028D69200300A53 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EEC80F6F2028D67D00300A53 /* Development.plist */,
+				EEC80F732028D67D00300A53 /* Development.xcconfig */,
+				EEC80F722028D67D00300A53 /* QA.plist */,
+				EEC80F6E2028D67D00300A53 /* QA.xcconfig */,
+				EEC80F712028D67D00300A53 /* Release.plist */,
+				EEC80F6D2028D67C00300A53 /* Release.xcconfig */,
+				EEC80F742028D67D00300A53 /* Staging.plist */,
+				EEC80F702028D67D00300A53 /* Staging.xcconfig */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +349,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC80F7C2028D67D00300A53 /* Staging.plist in Resources */,
+				EEC80F792028D67D00300A53 /* Release.plist in Resources */,
+				EEC80F762028D67D00300A53 /* QA.xcconfig in Resources */,
+				EEC80F752028D67D00300A53 /* Release.xcconfig in Resources */,
+				EEC80F772028D67D00300A53 /* Development.plist in Resources */,
+				EEC80F7B2028D67D00300A53 /* Development.xcconfig in Resources */,
+				EEC80F7A2028D67D00300A53 /* QA.plist in Resources */,
 				EE7A27F020282E5300E837AC /* LaunchScreen.storyboard in Resources */,
+				EEC80F782028D67D00300A53 /* Staging.xcconfig in Resources */,
 				EE7A27ED20282E5300E837AC /* Assets.xcassets in Resources */,
 				EE7A27E820282E5300E837AC /* Main.storyboard in Resources */,
 			);
@@ -347,6 +388,7 @@
 				EE7A2821202835C500E837AC /* ViewReusable.swift in Sources */,
 				EEC55DD620289F53003E28EB /* ProductViewModel.swift in Sources */,
 				EE7A2824202836FC00E837AC /* UIView+SafeAreaAnchors.swift in Sources */,
+				EEC80F7F2028D76600300A53 /* PlistHelper.swift in Sources */,
 				EEC55DC9202853F6003E28EB /* ProductXMLParser.swift in Sources */,
 				EE7A282A20283A5400E837AC /* SessionManager.swift in Sources */,
 				EE7A27E320282E5200E837AC /* AppDelegate.swift in Sources */,
@@ -526,7 +568,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FeedReader/Info.plist;
+				INFOPLIST_FILE = FeedReader/Development.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,7 +587,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = FeedReader/Info.plist;
+				INFOPLIST_FILE = FeedReader/Release.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -616,6 +658,213 @@
 			};
 			name = Release;
 		};
+		EEC80F572028D1BE00300A53 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = QA;
+		};
+		EEC80F582028D1BE00300A53 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4529XPL542;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FeedReader/QA.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = QA;
+		};
+		EEC80F592028D1BE00300A53 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedReader.app/FeedReader";
+			};
+			name = QA;
+		};
+		EEC80F5A2028D1BE00300A53 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedReader;
+			};
+			name = QA;
+		};
+		EEC80F5B2028D33900300A53 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		EEC80F5C2028D33900300A53 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4529XPL542;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FeedReader/Staging.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		EEC80F5D2028D33900300A53 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedReader.app/FeedReader";
+			};
+			name = Staging;
+		};
+		EEC80F5E2028D33900300A53 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronzohan.FeedReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedReader;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -623,7 +872,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE7A280820282E5300E837AC /* Debug */,
+				EEC80F572028D1BE00300A53 /* QA */,
 				EE7A280920282E5300E837AC /* Release */,
+				EEC80F5B2028D33900300A53 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -632,7 +883,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE7A280B20282E5300E837AC /* Debug */,
+				EEC80F582028D1BE00300A53 /* QA */,
 				EE7A280C20282E5300E837AC /* Release */,
+				EEC80F5C2028D33900300A53 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -641,7 +894,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE7A280E20282E5300E837AC /* Debug */,
+				EEC80F592028D1BE00300A53 /* QA */,
 				EE7A280F20282E5300E837AC /* Release */,
+				EEC80F5D2028D33900300A53 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -650,7 +905,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE7A281120282E5300E837AC /* Debug */,
+				EEC80F5A2028D1BE00300A53 /* QA */,
 				EE7A281220282E5300E837AC /* Release */,
+				EEC80F5E2028D33900300A53 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
