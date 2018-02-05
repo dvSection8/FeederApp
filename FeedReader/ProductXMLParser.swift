@@ -125,7 +125,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
                 let ratingImgUrl = try? document.select("img")
                                     .last()?
                                     .attr("src")
-                
+
                 if let _ratingImgUrl = ratingImgUrl ?? nil, let rating = extractedRating(from: _ratingImgUrl) {
                     self.rating = rating
                 }
@@ -150,7 +150,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         
         guard !components.isEmpty else { return nil }
         
-        guard let ratingStr = components[components.count - 1].components(separatedBy: ".").first?.components(separatedBy: "-") else {
+        guard let ratingStr = components[components.count - 1].components(separatedBy: ".").first?.components(separatedBy: "-"), ratingStr.count > 2 else {
             return nil
         }
         

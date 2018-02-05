@@ -18,7 +18,12 @@ struct ProductViewModel {
     }
     
     var rating: String {
-        return "Ratings: \(product.rating) of 5.0"
+        if product.rating > 0 {
+            return "Ratings: \(product.rating) of 5.0"
+        } else {
+            return "Ratings: No Ratings Yet."
+        }
+        
     }
     
     var pubDate: String {
