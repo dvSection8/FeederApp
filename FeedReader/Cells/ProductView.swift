@@ -19,6 +19,7 @@ class ProductView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 0
+        lbl.setContentHuggingPriority(.init(rawValue: 999), for: .vertical)
         
         return lbl
     }()
@@ -26,6 +27,8 @@ class ProductView: UIView {
     lazy private(set) var pubDateLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.setContentHuggingPriority(.init(rawValue: 998), for: .vertical)
+        
         lbl.numberOfLines = 0
         
         return lbl
@@ -44,10 +47,16 @@ class ProductView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(pubDateLabel)
-        stackView.addArrangedSubview(ratingLabel)
+
+        let ratingStackView = UIStackView()
+        ratingStackView.addArrangedSubview(ratingLabel)
+        ratingStackView.setContentHuggingPriority(.init(rawValue: 200), for: .vertical)
+        ratingStackView.alignment = .bottom
+        
+        stackView.addArrangedSubview(ratingStackView)
         stackView.axis = .vertical
         stackView.alignment = .top
-        stackView.spacing = Dimensions.spacing
+        stackView.spacing = 4
         
         return stackView
     }()
