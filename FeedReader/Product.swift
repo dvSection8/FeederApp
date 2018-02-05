@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Product: Codable {
+struct Product {
     var title: String = ""
-    var guid: String?
+    var guid: String = ""
     var pubDate: String = ""
     var link: String = ""
     var imageUrl: String = ""
@@ -23,4 +23,8 @@ extension Product: Equatable {
     }
 }
 
-
+extension Product: Hashable {
+    var hashValue: Int {
+        return guid.hashValue
+    }
+}
