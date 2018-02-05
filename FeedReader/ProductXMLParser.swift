@@ -20,10 +20,25 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         static var titleTag = "title"
         static var pubDateTag = "pubDate"
         static var descTag = "description"
+        static var guidTag = "guid"
         
         // NOTE: Image url and rating are retrieved from description because they dont have their own 
         // tag
     }
+
+    private static var xmlDateFormatter: DateFormatter = {
+        let dm = DateFormatter()
+        dm.dateFormat = "EEE, d MMM yyyy HH:mm:ss zzz"
+        
+        return dm 
+    }()
+    
+    private static var productDateFormatter: DateFormatter = {
+        let dm = DateFormatter()
+        dm.dateFormat = "EEE, d MMM yyyy"
+        
+        return dm 
+    }()
     
     private var products: [Product] = []
     
@@ -33,6 +48,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
     var imageUrl: String = ""
     var rating: Double = 0
     var desc: String = ""
+    var guid: String?
     
     func products(for xmlData: Data) -> [Product] {
         let parser = XMLParser(data: xmlData)
@@ -73,7 +89,9 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         case ProductKeys.titleTag:
             title = string
         case ProductKeys.pubDateTag:
-            pubDate = string
+            pubDate = formattedDate(for: string) ?? ""
+        case ProductKeys.guidTag:
+            guid = extractedGUID(from: string)
         case ProductKeys.descTag:
             desc = string
             
@@ -115,6 +133,14 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         }
     }
     
+    private func formattedDate(for dateString: String) -> String? {
+        guard let date = ProductXMLParser.xmlDateFormatter.date(from: dateString) else {
+            return nil
+        }
+        
+        return ProductXMLParser.productDateFormatter.string(from: date)
+    }
+    
     private func extractedRating(from imageUrl: String) -> Double? {
         // Sample format for the url on which rating will be extracted
         // https://images-eu.ssl-images-amazon.com/images/G/02/detail/stars-4-5._CB192253866_.gif
@@ -130,5 +156,13 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         let secondDigit = ratingStr[ratingStr.count - 1]
         
         return Double("\(firstDigit).\(secondDigit)")
+    }
+    
+    private func extractedGUID(from guid: String) -> String? {
+        // Sample format for the url on which rating will be extracted
+        // top-sellers_toys-and-games_toys-and-games_B01MRG7T0D
+        let components = guid.components(separatedBy: "_")
+        
+        return components.last
     }
 }
