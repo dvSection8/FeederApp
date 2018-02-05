@@ -71,6 +71,10 @@ class FeedPresenter {
                         return ratingSemiHighThresholdFilteredProducts
                     }
                 })
+                .map({ (products) -> [Product] in
+                    // Remove duplicates
+                    return Array(Set(products.map { $0 } ))
+                })
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { (products) in
                     self.view?.setProducts(products: products)
