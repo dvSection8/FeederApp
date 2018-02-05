@@ -23,6 +23,8 @@ class FeedPresenter {
         self.repository = repository
     }
     
+    var previouslySearchedString: String?
+    
     func searchProducts(for searchString: String) {
         view?.setProducts(products: [])
         view?.reloadData()

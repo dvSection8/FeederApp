@@ -29,7 +29,8 @@ class FeedViewController: UIViewController, IFeedView {
     // MARK: - Subviews
     lazy private(set) var searchController: UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
-        sc.searchResultsUpdater = self
+        sc.searchBar.placeholder = "Search Books..."
+        sc.searchBar.delegate = self
         sc.searchBar.sizeToFit()
         
         return sc
@@ -45,9 +46,13 @@ class FeedViewController: UIViewController, IFeedView {
         tv.tableHeaderView = searchController.searchBar
         tv.tableFooterView = UIView()
         tv.allowsSelection = false
+        tv.keyboardDismissMode = .onDrag
         
         return tv
     }()
+    
+    var subscription: Disposable?
+    var dismissSubscription: Disposable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +95,21 @@ class FeedViewController: UIViewController, IFeedView {
 // MARK: - UISearchResultsUpdating
 extension FeedViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        
+
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - UISearchBarDelegate
+extension FeedViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.previouslySearchedString = searchText
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.text = presenter?.previouslySearchedString
+    }
+}
+
 extension FeedViewController: UITableViewDelegate {
     
 }
