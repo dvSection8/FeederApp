@@ -35,7 +35,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
     
     private static var productDateFormatter: DateFormatter = {
         let dm = DateFormatter()
-        dm.dateFormat = "EEE, d MMM yyyy"
+        dm.dateFormat = "MMM d, yyyy"
         
         return dm 
     }()
@@ -43,6 +43,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
     private var products: [Product] = []
     
     var elementName: String = "'"
+
     var title: String = ""
     var pubDate: String = ""
     var imageUrl: String = ""
