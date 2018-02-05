@@ -48,7 +48,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
     var imageUrl: String = ""
     var rating: Double = 0
     var desc: String = ""
-    var guid: String?
+    var guid: String = ""
     
     func products(for xmlData: Data) -> [Product] {
         let parser = XMLParser(data: xmlData)
@@ -73,6 +73,7 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
             product.pubDate = pubDate
             product.imageUrl = imageUrl
             product.rating = rating
+            product.guid = guid
             
             products.append(product)
         }
@@ -158,11 +159,11 @@ class ProductXMLParser: NSObject, XMLParserDelegate {
         return Double("\(firstDigit).\(secondDigit)")
     }
     
-    private func extractedGUID(from guid: String) -> String? {
+    private func extractedGUID(from guid: String) -> String {
         // Sample format for the url on which rating will be extracted
         // top-sellers_toys-and-games_toys-and-games_B01MRG7T0D
         let components = guid.components(separatedBy: "_")
         
-        return components.last
+        return components.last ?? ""
     }
 }
