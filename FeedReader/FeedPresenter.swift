@@ -15,7 +15,8 @@ class FeedPresenter {
     
     let disposeBag = DisposeBag()
     
-    let ratingThreshold: Double = 0
+    let ratingThreshold: Double = 4.5
+    let secondRatingThreshold: Double = 4.0
     
     init(view: IFeedView, repository: IFeedRepository) {
         self.view = view
@@ -23,34 +24,58 @@ class FeedPresenter {
     }
     
     func searchProducts(for searchString: String) {
-        repository.fetchProducts()
-            .map({ (products) -> [Product] in
-                return products.filter({ (product) -> Bool in
-                            // Check if rating is less than 4.5
-                            // remove if they are
-                            if product.rating >= self.ratingThreshold {
-                                return true
-                            } else {
-                                return false
-                            }
-                        })
-                    .filter({ (product) -> Bool in
-                        if searchString.isEmpty {
-                            return true
-                        }
-
-                        if product.title.lowercased().contains(searchString.lowercased()) {
-                            return true
-                        } else {
-                            return false
-                        }
-                    })
-            })
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (products) in
-                self.view?.setProducts(products: products)
-                self.view?.reloadData()
-            })
-            .disposed(by: disposeBag)
+        view?.setProducts(products: [])
+        view?.reloadData()
+        
+        return repository.fetchProducts()
+                .map({ (products) -> [Product] in
+                    let nameFilteredProducts = products
+                            .filter({ (product) -> Bool in
+                                if searchString.isEmpty {
+                                    return true
+                                }
+                                
+                                if product.title.lowercased().contains(searchString.lowercased()) {
+                                    return true
+                                } else {
+                                    return false
+                                }
+                            })
+                    let ratingHighThresholdFilteredProducts = nameFilteredProducts
+                            .filter({ (product) -> Bool in
+                                // Check if rating is less than 4.5
+                                // remove if they are
+                                if product.rating >= self.ratingThreshold {
+                                    return true
+                                } else {
+                                    return false
+                                }
+                            })
+                    
+                    if !ratingHighThresholdFilteredProducts.isEmpty {
+                        return ratingHighThresholdFilteredProducts
+                    } else {
+                        // If previous filter is empty,
+                        // then try including 4.0 ratings
+                        let ratingSemiHighThresholdFilteredProducts = nameFilteredProducts
+                            .filter({ (product) -> Bool in
+                                // Check if rating is less than 4.0
+                                // remove if they are
+                                if product.rating >= self.secondRatingThreshold {
+                                    return true
+                                } else {
+                                    return false
+                                }
+                            })
+                        
+                        return ratingSemiHighThresholdFilteredProducts
+                    }
+                })
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { (products) in
+                    self.view?.setProducts(products: products)
+                    self.view?.reloadData()
+                })
+                .disposed(by: disposeBag)
     }
 }

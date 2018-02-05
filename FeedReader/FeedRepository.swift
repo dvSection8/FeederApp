@@ -20,11 +20,21 @@ class FeedRepository: IFeedRepository {
         
         var responseObservables: [Observable<[Product]>] = []
         
-//        urls.foreac
-        guard let url = URL.init(string: "http://www.amazon.co.uk/gp/rss/bestsellers/books/72/ref=zg_bs_72_rsslink") else {
-            return Observable.empty()
+        urls.forEach { (url) in
+            guard let url = URL.init(string: url) else {
+                return
+            }
+
+            responseObservables.append(SessionManager.responseProducts(for: url))
         }
         
-        return SessionManager.responseProducts(for: url)
+        return Observable.zip(responseObservables) { productsArr in
+            var productsAggregate: [Product] = []
+            productsArr.forEach({ (products) in
+                productsAggregate.append(contentsOf: products)
+            })
+        
+            return productsAggregate
+        }
     }
 }

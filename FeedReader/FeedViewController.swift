@@ -65,7 +65,7 @@ class FeedViewController: UIViewController, IFeedView {
         presenter?.searchProducts(for: "")
         
         searchController.searchBar.rx.text.orEmpty
-            .throttle(1, scheduler: MainScheduler.instance)
+            .debounce(1, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { (query) in
                 self.presenter?.searchProducts(for: query)
