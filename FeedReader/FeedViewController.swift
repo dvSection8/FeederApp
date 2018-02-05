@@ -67,8 +67,6 @@ class FeedViewController: UIViewController, IFeedView {
             tableView.safeAreaBottomAnchor.constraint(equalTo: view.safeAreaBottomAnchor)
             ])
         
-        presenter?.searchProducts(for: "")
-        
         searchController.searchBar.rx.text.orEmpty
             .debounce(1, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
