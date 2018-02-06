@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Install dependecines by using 
+Install dependencies by using 
 
 ```
 carthage update --platform iOS
