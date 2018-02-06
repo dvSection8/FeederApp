@@ -18,3 +18,6 @@ Things you need:
 * [RxSwift](https://github.com/ReactiveX/RxSwift) - Reactive Extension 
 * [SwiftSoup](https://github.com/scinfu/SwiftSoup) - HTML Parser
 * [Kingfisher](https://github.com/onevcat/Kingfisher) - Downloading and caching images from the web.
+
+## TODO 
+[ ] Redo file structure for better code organization
