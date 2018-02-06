@@ -21,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let repository = FeedRepository()
 
         // Just add in the plist the desired rss urls
-        let urls: [String] = Environment().configuration(PlistKey.urls)
-        repository.urls = urls
-        
+        if let urls: [String] = Environment().configuration(PlistKey.urls) {
+            repository.urls = urls
+        }
+
         let presenter = FeedPresenter(view: feedVC, repository: repository)
-        
         feedVC.presenter = presenter
         
         window = UIWindow(frame: UIScreen.main.bounds)

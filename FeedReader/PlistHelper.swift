@@ -32,10 +32,10 @@ public struct Environment {
         }
     }
 
-    public func configuration<T>(_ key: PlistKey) -> T {
+    public func configuration<T>(_ key: PlistKey) -> T? {
         switch key {
         case .urls:
-            return infoDict[PlistKey.urls.value()] as! T
+            return infoDict[PlistKey.urls.value()] as? T
         }
     }
 }
