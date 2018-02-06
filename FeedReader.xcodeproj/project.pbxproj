@@ -252,6 +252,7 @@
 				EE7A27DC20282E5200E837AC /* Frameworks */,
 				EE7A27DD20282E5200E837AC /* Resources */,
 				EE7A28162028300700E837AC /* Embed Frameworks */,
+				EEF55A9E202937110044E3B0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -378,6 +379,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEF55A9E202937110044E3B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftSoup.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE7A27DB20282E5200E837AC /* Sources */ = {
