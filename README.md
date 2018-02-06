@@ -1,6 +1,4 @@
-# Project Title
-
-RSS Feed App
+# RSS Feed App
 
 ## Getting Started
 
