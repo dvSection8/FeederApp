@@ -12,6 +12,6 @@ carthage update --platform iOS
 
 ### Prerequisites
 
-What things you need:
+Things you need:
 * [Carthage](https://github.com/Carthage/Carthage) - Dependency Manager
 
